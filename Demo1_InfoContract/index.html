@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="./node_modules/web3/dist/web3.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Info Contract</h1>
+		<h2 id="info"></h2>
+
+		<label for="name" class="col-lg-2 control-label">Name</label>
+		<input id="name" type="text">
+
+		<label for="name" class="col-lg-2 control-label">Age</label>
+		<input type="text" id="age">
+		<button id="button">update info</button>
+
+	</div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+	<script type="text/javascript">
+		if (typeof web3 !== 'undefined') {
+			web3 = new Web3(web3.currentProvider);
+		} else {
+			web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
+		}
+
+		web3.eth.defaultAccount = "0xd810c3E31C5bB3c0B19e68bC04023872BCEDc016";
+
+		var InfoContract = web3.eth.contract([
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_fName",
+				"type": "string"
+			},
+			{
+				"name": "_age",
+				"type": "uint256"
+			}
+		],
+		"name": "setInfo",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getInfo",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]);
+
+		var info = InfoContract.at('0x85FF465A6AdCf478D73372C108eC369b8b5A4d66');
+
+		info.getInfo(function(error, result) {
+			if (!error) {
+				$("#info").html(result[0]+'('+result[1]+'years old)');
+				console.log(result);
+			}
+			else
+				console.error('no');
+		});
+
+
+        $("#button").click(
+        	function() {
+        	info.setInfo($("#name").val(),$("#age").val());
+        });
+
+	</script>
+
+
+
+</body>
+</html>
