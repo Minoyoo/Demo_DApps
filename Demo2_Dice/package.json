@@ -1,0 +1,16 @@
+{
+  "name": "demo2_dice",
+  "version": "1.0.0",
+  "description": "Dice",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "web3": "^0.20.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mino",
+  "license": "ISC"
+}
