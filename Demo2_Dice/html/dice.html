@@ -7,6 +7,11 @@
   <title>Jox Dice</title>
   <!-- Bootstrap -->
   <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+  .card-deck .card{
+    margin: 0 auto;
+  }
+</style>
 </head>
 <body>
 
@@ -45,31 +50,33 @@
   <div class="container" style="text-align: center;">
     <!-- banner start -->
     <div class="row" style="margin-top: 8px;">
+      <div class="card-deck" style="margin: 0 auto; width: 100%">
 
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem; height: 20rem; border-color: #24A2B6;">
-          <div class="card-body btn-outline-info">
-            <h5 class="card-title">Rules</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem; height: 20rem; border-color: #24A2B6;">
+            <div class="card-body btn-outline-info">
+              <h5 class="card-title">Rules</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4">
-        <div class="" style="width: 20rem">
-          <h4 class="card-title" style="margin-top: 2rem">Result</h4>
-          <div class="card"  style="border-color: #24A2B6; width: auto;height: 10rem; text-align: center;" >
-           <h1 class="" style="margin-top: 3rem; color: #FF9800">10.00000</h1>
+        <div class="col-md-4">
+          <div class="" style="width: 20rem; margin: 0 auto;">
+            <h4 class="card-title" style="margin-top: 2rem">Result</h4>
+            <div class="card"  style="border-color: #24A2B6; width: auto;height: 10rem; text-align: center;" >
+             <h1 class="" style="margin-top: 3rem; color: #FF9800">10.00000</h1>
+           </div>
+           <h4 class="card-title" style="margin: 2rem; color: ">WIN</h4>
          </div>
-         <h4 class="card-title" style="margin: 2rem; color: ">WIN</h4>
        </div>
-     </div>
 
-     <div class="col-md-3">
-      <div class="card btn-outline-info" style="border-color: #24A2B6; width: 18rem; height: 20rem">
-        <div class="card-body">
-          <h5 class="card-title">How to play</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+       <div class="col-md-4">
+        <div class="card btn-outline-info" style="border-color: #24A2B6; width: 18rem; height: 20rem">
+          <div class="card-body">
+            <h5 class="card-title">How to play</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -81,31 +88,32 @@
   <!-- game start -->
   <hr class="my-4">
   <div class="row">
-
-    <div class="col-md-4">
-      <div class="card shadow btn-outline-danger" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Contract Balance:</h5>
-          <p class="card-text">10000000000 ETZ</p>
+    <div class="card-deck" style="margin: 0 auto; width: 100%">
+      <div class="col-md-4">
+        <div class="card shadow btn-outline-danger" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Contract Balance:</h5>
+            <p class="card-text">10000000000 ETZ</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="" style="width: 20rem; text-align: center;">
-        <div class="card-body">
-          <a href="#" class="btn btn btn-outline-info my-2 my-sm-0 shadow">Bet < 48</a>
-          <img src="../img/heisaizi.svg" width="30" height="30" alt="">
-          <a href="#" class="btn btn btn-outline-info my-2 my-sm-0 shadow">52 < Bet</a>
+      <div class="col-md-4">
+        <div class="" style="width: 20rem; text-align: center; margin: 0 auto;">
+          <div class="card-body">
+            <a href="#" class="btn btn btn-outline-info my-2 my-sm-0 shadow">Bet < 48</a>
+            <img src="../img/heisaizi.svg" width="30" height="30" alt="">
+            <a href="#" class="btn btn btn-outline-info my-2 my-sm-0 shadow">52 < Bet</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-md-4">
-      <div class="card shadow btn-outline-warning" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">Total Awards:</h5>
-          <p class="card-text">10000000000 ETZ</p>
+      <div class="col-md-4">
+        <div class="card shadow btn-outline-warning" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Total Awards:</h5>
+            <p class="card-text">10000000000 ETZ</p>
+          </div>
         </div>
       </div>
     </div>
@@ -116,7 +124,8 @@
 
   <!-- about start-->
   <div class="row" style="margin-top: 8px;">
-    <div class="card col-md-12" style="text-align: center; color: #6C757D">
+
+    <div class="card col-md-12" style="text-align: center; color: #6C757D; padding-top: 2rem;padding-bottom: 2rem;">
       <h2>About us</h2>
       <h4>We are fans of EtherZero and we believe that blockchain can bring innovation. </h4>
       <h4>The high concurrency nature of EtherZero makes us willing to develop on top of it. </h4>
