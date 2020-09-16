@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<script src="./node_modules/web3/dist/web3.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>web3.eth.getBalance("0xdd212d8efe11ac1fb4a503be9d3306a621afc428")</h1>
+
+		
+
+
+
+	</div>
+
+	<script type="text/javascript">
+		if (typeof web3 !== 'undefined') {
+			web3 = new Web3(web3.currentProvider);
+		} else {
+			web3 = new Web3(new Web3.providers.HttpProvider('http://182.61.166.62:8003'));
+		}
+
+		let balance = web3.eth.getBalance("0xdd212d8efe11ac1fb4a503be9d3306a621afc428");
+
+		let block = web3.eth.getBlock(1);
+
+		
+		//let balance1 = web3.eth.getBalance("0x7276676Dd237Ac747d7232D5602690d2271f1500");
+		console.log("____________________________");
+		
+		console.log(balance.toNumber() / (10**18));
+		console.log("____________________________");
+		console.log(block);
+
+
+		
+		
+	</script>
+
+
+
+</body>
+</html>
